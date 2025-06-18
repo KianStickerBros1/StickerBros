@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StickerBros</title>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=CAD"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fdfdfd;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .product {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .product h2 {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>StickerBros</h1>
+  <p class="tagline">Random, Sports & Shoe Stickers — All for $1 CAD</p>
+
+  <div class="product">
+    <h2>Random Stickers</h2>
+    <div id="paypal-button-random"></div>
+  </div>
+
+  <div class="product">
+    <h2>Sports Stickers</h2>
+    <div id="paypal-button-sports"></div>
+  </div>
+
+  <div class="product">
+    <h2>Shoe Stickers</h2>
+    <div id="paypal-button-shoe"></div>
+  </div>
+
+  <script>
+    paypal.HostedButtons({
+      hostedButtonId: "6L7GDTDJ82GRC",
+    }).render("#paypal-button-random");
+
+    paypal.HostedButtons({
+      hostedButtonId: "6L7GDTDJ82GRC",
+    }).render("#paypal-button-sports");
+
+    paypal.HostedButtons({
+      hostedButtonId: "6L7GDTDJ82GRC",
+    }).render("#paypal-button-shoe");
+  </script>
+</body>
+</html>
